@@ -1,11 +1,15 @@
 <?php
 
-    class userTest extends PHPUnit_Framework_TestCase {
+    require_once 'tests/base.class.php';
+
+    class userTest extends base {
+
+        protected $user = NULL;
 
         public function setUp() {
+            $this->load_config();
             $this->user = new user();
         }
-
 
         public function testGetUserIdDirectlyFails() {
             $this->user->set_id(1);

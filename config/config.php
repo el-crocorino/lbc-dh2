@@ -6,6 +6,8 @@
     /*ini_set("expose_php","off");*/
     ini_set('error_reporting', E_ALL);
 
+    $dConfig = array();
+
     // Application libraries
     $dConfig['includes'] = array(
         'functions.php',
@@ -14,7 +16,7 @@
 
     // PATHS
     $dConfig['paths'] = array(
-    	'base_path' => '/var/www/www-dev/lbc-dh2/',
+    	'base_path' => substr(__DIR__, 0, -6),
     	'includes'  => 'includes/',
     	'classes'   => 'classes/'
 
