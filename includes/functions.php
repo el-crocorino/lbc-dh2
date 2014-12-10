@@ -1,5 +1,4 @@
 <?php
-
 /**
 * Check if var is a string
 *
@@ -8,7 +7,14 @@
 * @return NULL
 */
 
-    #require_once '../config/config.php';
+    /**
+     * Loads config
+     *
+     * @return void
+     */
+    function load_config() {
+        require substr(dirname(__FILE__), 0, -8) . 'config/config.php';
+    }
 
     /**
      * Checks if data is string
@@ -18,8 +24,27 @@
      * @return void
      */
     function load_class($classname) {
-        require $dConfig['paths']['base_path'] . $dConfig['paths']['classes'] . $classname . '/' . $classname . '_orm.class.php';
-        require $dConfig['paths']['base_path'] . $dConfig['paths']['classes'] . $classname . '/' . $classname . '.class.php';
+
+        try {
+
+            global $dConfig;
+
+            require_once $dConfig['paths']['base_path'] . $dConfig['paths']['classes'] . $classname . '/' . $classname . '_orm.class.php';
+            require_once $dConfig['paths']['base_path'] . $dConfig['paths']['classes'] . $classname . '/' . $classname . '.class.php';
+
+            /*if (file_exists($dConfig['paths']['base_path'] . $dConfig['paths']['classes'] . $classname . '/' . $classname . '_orm.class.php')) {
+                require_once $dConfig['paths']['base_path'] . $dConfig['paths']['classes'] . $classname . '/' . $classname . '_orm.class.php';
+                require_once $dConfig['paths']['base_path'] . $dConfig['paths']['classes'] . $classname . '/' . $classname . '.class.php';
+            } else {
+                require_once $dConfig['paths']['base_path'] . $dConfig['paths']['classes'] . $classname . '/' . $classname . '.class.php';
+            }*/
+
+
+        } catch (Exception $e) {
+            dump($e);
+        }
+
+
     }
 
     /**
@@ -31,10 +56,10 @@
      */
     function dump($var, $description = '') {
 
-        echo $description;
+        echo "\r\n" . $description . "\r\n";
         echo '<pre>';
         var_dump($var);
-        echo '</pre>';
+        echo "</pre>\r\n";
 
     }
 
@@ -82,3 +107,4 @@
         }
 
     }
+

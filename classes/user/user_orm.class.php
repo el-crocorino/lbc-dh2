@@ -21,6 +21,16 @@
         protected $password = '';
 
         /**
+         * Sets user id
+         *
+         * @return string
+         */
+        public function set_id($id) {
+            check_int($id, 'id');
+            $this->id = $id;
+        }
+
+        /**
          * Gets user id
          *
          * @return string
@@ -67,6 +77,19 @@
          */
         public function get_password() {
             return $this->password;
+        }
+
+
+        public function load($id, $db) {
+
+            check_int($id, 'id');
+
+            $user_data = $db->get_value('user', $id);
+
+            $this->set_id($user_data['id']);
+            $this->set_username($user_data['username']);
+            $this->set_password($user_data['password']);
+
         }
 
     }

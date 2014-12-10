@@ -5,6 +5,7 @@
     ini_set("display_errors","on");
     /*ini_set("expose_php","off");*/
     ini_set('error_reporting', E_ALL);
+    ini_set('include_path', substr(__DIR__, 0, -6) . 'classes:' . substr(__DIR__, 0, -6) . 'includes:' . __DIR__);
 
     $dConfig = array();
 
@@ -19,5 +20,4 @@
     	'base_path' => substr(__DIR__, 0, -6),
     	'includes'  => 'includes/',
     	'classes'   => 'classes/'
-
     );

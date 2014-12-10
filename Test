@@ -1,0 +1,795 @@
+PHPUnit 3.6.10 by Sebastian Bergmann.
+
+<pre>class PHPUnit_Framework_Error_Notice#8 (9) {
+  protected $message =>
+  string(27) "Undefined variable: dConfig"
+  private $string =>
+  string(0) ""
+  protected $code =>
+  int(8)
+  protected $file =>
+  string(55) "/media/sf_VMDocs/www-dev/lbc-dh2/includes/functions.php"
+  protected $line =>
+  int(22)
+  private $trace =>
+  array(12) {
+    [0] =>
+    array(6) {
+      'file' =>
+      string(55) "/media/sf_VMDocs/www-dev/lbc-dh2/includes/functions.php"
+      'line' =>
+      int(22)
+      'function' =>
+      string(11) "handleError"
+      'class' =>
+      string(25) "PHPUnit_Util_ErrorHandler"
+      'type' =>
+      string(2) "::"
+      'args' =>
+      array(5) {
+        ...
+      }
+    }
+    [1] =>
+    array(2) {
+      'function' =>
+      string(11) "load_config"
+      'args' =>
+      array(1) {
+        ...
+      }
+    }
+    [2] =>
+    array(4) {
+      'file' =>
+      string(70) "/media/sf_VMDocs/www-dev/lbc-dh2/tests/classes/user/userTest.class.php"
+      'line' =>
+      int(11)
+      'function' =>
+      string(17) "spl_autoload_call"
+      'args' =>
+      array(1) {
+        ...
+      }
+    }
+    [3] =>
+    array(6) {
+      'file' =>
+      string(45) "/usr/share/php/PHPUnit/Framework/TestCase.php"
+      'line' =>
+      int(801)
+      'function' =>
+      string(5) "setUp"
+      'class' =>
+      string(8) "userTest"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(0) {
+        ...
+      }
+    }
+    [4] =>
+    array(6) {
+      'file' =>
+      string(47) "/usr/share/php/PHPUnit/Framework/TestResult.php"
+      'line' =>
+      int(649)
+      'function' =>
+      string(7) "runBare"
+      'class' =>
+      string(26) "PHPUnit_Framework_TestCase"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(0) {
+        ...
+      }
+    }
+    [5] =>
+    array(6) {
+      'file' =>
+      string(45) "/usr/share/php/PHPUnit/Framework/TestCase.php"
+      'line' =>
+      int(751)
+      'function' =>
+      string(3) "run"
+      'class' =>
+      string(28) "PHPUnit_Framework_TestResult"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(1) {
+        ...
+      }
+    }
+    [6] =>
+    array(6) {
+      'file' =>
+      string(46) "/usr/share/php/PHPUnit/Framework/TestSuite.php"
+      'line' =>
+      int(772)
+      'function' =>
+      string(3) "run"
+      'class' =>
+      string(26) "PHPUnit_Framework_TestCase"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(1) {
+        ...
+      }
+    }
+    [7] =>
+    array(6) {
+      'file' =>
+      string(46) "/usr/share/php/PHPUnit/Framework/TestSuite.php"
+      'line' =>
+      int(745)
+      'function' =>
+      string(7) "runTest"
+      'class' =>
+      string(27) "PHPUnit_Framework_TestSuite"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(2) {
+        ...
+      }
+    }
+    [8] =>
+    array(6) {
+      'file' =>
+      string(44) "/usr/share/php/PHPUnit/TextUI/TestRunner.php"
+      'line' =>
+      int(325)
+      'function' =>
+      string(3) "run"
+      'class' =>
+      string(27) "PHPUnit_Framework_TestSuite"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(5) {
+        ...
+      }
+    }
+    [9] =>
+    array(6) {
+      'file' =>
+      string(41) "/usr/share/php/PHPUnit/TextUI/Command.php"
+      'line' =>
+      int(192)
+      'function' =>
+      string(5) "doRun"
+      'class' =>
+      string(25) "PHPUnit_TextUI_TestRunner"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(2) {
+        ...
+      }
+    }
+    [10] =>
+    array(6) {
+      'file' =>
+      string(41) "/usr/share/php/PHPUnit/TextUI/Command.php"
+      'line' =>
+      int(130)
+      'function' =>
+      string(3) "run"
+      'class' =>
+      string(22) "PHPUnit_TextUI_Command"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(2) {
+        ...
+      }
+    }
+    [11] =>
+    array(6) {
+      'file' =>
+      string(16) "/usr/bin/phpunit"
+      'line' =>
+      int(46)
+      'function' =>
+      string(4) "main"
+      'class' =>
+      string(22) "PHPUnit_TextUI_Command"
+      'type' =>
+      string(2) "::"
+      'args' =>
+      array(0) {
+        ...
+      }
+    }
+  }
+  private $previous =>
+  NULL
+  public $trace =>
+  array(11) {
+    [0] =>
+    array(2) {
+      'function' =>
+      string(11) "load_config"
+      'args' =>
+      array(1) {
+        ...
+      }
+    }
+    [1] =>
+    array(4) {
+      'file' =>
+      string(70) "/media/sf_VMDocs/www-dev/lbc-dh2/tests/classes/user/userTest.class.php"
+      'line' =>
+      int(11)
+      'function' =>
+      string(17) "spl_autoload_call"
+      'args' =>
+      array(1) {
+        ...
+      }
+    }
+    [2] =>
+    array(6) {
+      'file' =>
+      string(45) "/usr/share/php/PHPUnit/Framework/TestCase.php"
+      'line' =>
+      int(801)
+      'function' =>
+      string(5) "setUp"
+      'class' =>
+      string(8) "userTest"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(0) {
+        ...
+      }
+    }
+    [3] =>
+    array(6) {
+      'file' =>
+      string(47) "/usr/share/php/PHPUnit/Framework/TestResult.php"
+      'line' =>
+      int(649)
+      'function' =>
+      string(7) "runBare"
+      'class' =>
+      string(26) "PHPUnit_Framework_TestCase"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(0) {
+        ...
+      }
+    }
+    [4] =>
+    array(6) {
+      'file' =>
+      string(45) "/usr/share/php/PHPUnit/Framework/TestCase.php"
+      'line' =>
+      int(751)
+      'function' =>
+      string(3) "run"
+      'class' =>
+      string(28) "PHPUnit_Framework_TestResult"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(1) {
+        ...
+      }
+    }
+    [5] =>
+    array(6) {
+      'file' =>
+      string(46) "/usr/share/php/PHPUnit/Framework/TestSuite.php"
+      'line' =>
+      int(772)
+      'function' =>
+      string(3) "run"
+      'class' =>
+      string(26) "PHPUnit_Framework_TestCase"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(1) {
+        ...
+      }
+    }
+    [6] =>
+    array(6) {
+      'file' =>
+      string(46) "/usr/share/php/PHPUnit/Framework/TestSuite.php"
+      'line' =>
+      int(745)
+      'function' =>
+      string(7) "runTest"
+      'class' =>
+      string(27) "PHPUnit_Framework_TestSuite"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(2) {
+        ...
+      }
+    }
+    [7] =>
+    array(6) {
+      'file' =>
+      string(44) "/usr/share/php/PHPUnit/TextUI/TestRunner.php"
+      'line' =>
+      int(325)
+      'function' =>
+      string(3) "run"
+      'class' =>
+      string(27) "PHPUnit_Framework_TestSuite"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(5) {
+        ...
+      }
+    }
+    [8] =>
+    array(6) {
+      'file' =>
+      string(41) "/usr/share/php/PHPUnit/TextUI/Command.php"
+      'line' =>
+      int(192)
+      'function' =>
+      string(5) "doRun"
+      'class' =>
+      string(25) "PHPUnit_TextUI_TestRunner"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(2) {
+        ...
+      }
+    }
+    [9] =>
+    array(6) {
+      'file' =>
+      string(41) "/usr/share/php/PHPUnit/TextUI/Command.php"
+      'line' =>
+      int(130)
+      'function' =>
+      string(3) "run"
+      'class' =>
+      string(22) "PHPUnit_TextUI_Command"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(2) {
+        ...
+      }
+    }
+    [10] =>
+    array(6) {
+      'file' =>
+      string(16) "/usr/bin/phpunit"
+      'line' =>
+      int(46)
+      'function' =>
+      string(4) "main"
+      'class' =>
+      string(22) "PHPUnit_TextUI_Command"
+      'type' =>
+      string(2) "::"
+      'args' =>
+      array(0) {
+        ...
+      }
+    }
+  }
+  public $xdebug_message =>
+  string(1359) "\nPHPUnit_Framework_Error_Notice: Undefined variable: dConfig in /media/sf_VMDocs/www-dev/lbc-dh2/includes/functions.php on line 22\n\nCall Stack:\n    0.0040     116916   1. {main}() /usr/bin/phpunit:0\n    0.0311     304828   2. PHPUnit_TextUI_Command::main() /usr/bin/phpunit:46\n    0.0311     304952   3. PHPUnit_TextUI_Command->run() /usr/share/php/PHPUnit/TextUI/Command.php:130\n    0.0880    1209060   4. PHPUnit_TextUI_TestRunner->doRun() /usr/share/php/PHPUnit/TextUI/Command.php:192\n    0.0953    13"...
+}
+</pre><pre>class PHPUnit_Framework_Error_Notice#8 (9) {
+  protected $message =>
+  string(27) "Undefined variable: dConfig"
+  private $string =>
+  string(0) ""
+  protected $code =>
+  int(8)
+  protected $file =>
+  string(55) "/media/sf_VMDocs/www-dev/lbc-dh2/includes/functions.php"
+  protected $line =>
+  int(41)
+  private $trace =>
+  array(12) {
+    [0] =>
+    array(6) {
+      'file' =>
+      string(55) "/media/sf_VMDocs/www-dev/lbc-dh2/includes/functions.php"
+      'line' =>
+      int(41)
+      'function' =>
+      string(11) "handleError"
+      'class' =>
+      string(25) "PHPUnit_Util_ErrorHandler"
+      'type' =>
+      string(2) "::"
+      'args' =>
+      array(5) {
+        ...
+      }
+    }
+    [1] =>
+    array(2) {
+      'function' =>
+      string(10) "load_class"
+      'args' =>
+      array(1) {
+        ...
+      }
+    }
+    [2] =>
+    array(4) {
+      'file' =>
+      string(70) "/media/sf_VMDocs/www-dev/lbc-dh2/tests/classes/user/userTest.class.php"
+      'line' =>
+      int(11)
+      'function' =>
+      string(17) "spl_autoload_call"
+      'args' =>
+      array(1) {
+        ...
+      }
+    }
+    [3] =>
+    array(6) {
+      'file' =>
+      string(45) "/usr/share/php/PHPUnit/Framework/TestCase.php"
+      'line' =>
+      int(801)
+      'function' =>
+      string(5) "setUp"
+      'class' =>
+      string(8) "userTest"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(0) {
+        ...
+      }
+    }
+    [4] =>
+    array(6) {
+      'file' =>
+      string(47) "/usr/share/php/PHPUnit/Framework/TestResult.php"
+      'line' =>
+      int(649)
+      'function' =>
+      string(7) "runBare"
+      'class' =>
+      string(26) "PHPUnit_Framework_TestCase"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(0) {
+        ...
+      }
+    }
+    [5] =>
+    array(6) {
+      'file' =>
+      string(45) "/usr/share/php/PHPUnit/Framework/TestCase.php"
+      'line' =>
+      int(751)
+      'function' =>
+      string(3) "run"
+      'class' =>
+      string(28) "PHPUnit_Framework_TestResult"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(1) {
+        ...
+      }
+    }
+    [6] =>
+    array(6) {
+      'file' =>
+      string(46) "/usr/share/php/PHPUnit/Framework/TestSuite.php"
+      'line' =>
+      int(772)
+      'function' =>
+      string(3) "run"
+      'class' =>
+      string(26) "PHPUnit_Framework_TestCase"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(1) {
+        ...
+      }
+    }
+    [7] =>
+    array(6) {
+      'file' =>
+      string(46) "/usr/share/php/PHPUnit/Framework/TestSuite.php"
+      'line' =>
+      int(745)
+      'function' =>
+      string(7) "runTest"
+      'class' =>
+      string(27) "PHPUnit_Framework_TestSuite"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(2) {
+        ...
+      }
+    }
+    [8] =>
+    array(6) {
+      'file' =>
+      string(44) "/usr/share/php/PHPUnit/TextUI/TestRunner.php"
+      'line' =>
+      int(325)
+      'function' =>
+      string(3) "run"
+      'class' =>
+      string(27) "PHPUnit_Framework_TestSuite"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(5) {
+        ...
+      }
+    }
+    [9] =>
+    array(6) {
+      'file' =>
+      string(41) "/usr/share/php/PHPUnit/TextUI/Command.php"
+      'line' =>
+      int(192)
+      'function' =>
+      string(5) "doRun"
+      'class' =>
+      string(25) "PHPUnit_TextUI_TestRunner"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(2) {
+        ...
+      }
+    }
+    [10] =>
+    array(6) {
+      'file' =>
+      string(41) "/usr/share/php/PHPUnit/TextUI/Command.php"
+      'line' =>
+      int(130)
+      'function' =>
+      string(3) "run"
+      'class' =>
+      string(22) "PHPUnit_TextUI_Command"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(2) {
+        ...
+      }
+    }
+    [11] =>
+    array(6) {
+      'file' =>
+      string(16) "/usr/bin/phpunit"
+      'line' =>
+      int(46)
+      'function' =>
+      string(4) "main"
+      'class' =>
+      string(22) "PHPUnit_TextUI_Command"
+      'type' =>
+      string(2) "::"
+      'args' =>
+      array(0) {
+        ...
+      }
+    }
+  }
+  private $previous =>
+  NULL
+  public $trace =>
+  array(11) {
+    [0] =>
+    array(2) {
+      'function' =>
+      string(10) "load_class"
+      'args' =>
+      array(1) {
+        ...
+      }
+    }
+    [1] =>
+    array(4) {
+      'file' =>
+      string(70) "/media/sf_VMDocs/www-dev/lbc-dh2/tests/classes/user/userTest.class.php"
+      'line' =>
+      int(11)
+      'function' =>
+      string(17) "spl_autoload_call"
+      'args' =>
+      array(1) {
+        ...
+      }
+    }
+    [2] =>
+    array(6) {
+      'file' =>
+      string(45) "/usr/share/php/PHPUnit/Framework/TestCase.php"
+      'line' =>
+      int(801)
+      'function' =>
+      string(5) "setUp"
+      'class' =>
+      string(8) "userTest"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(0) {
+        ...
+      }
+    }
+    [3] =>
+    array(6) {
+      'file' =>
+      string(47) "/usr/share/php/PHPUnit/Framework/TestResult.php"
+      'line' =>
+      int(649)
+      'function' =>
+      string(7) "runBare"
+      'class' =>
+      string(26) "PHPUnit_Framework_TestCase"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(0) {
+        ...
+      }
+    }
+    [4] =>
+    array(6) {
+      'file' =>
+      string(45) "/usr/share/php/PHPUnit/Framework/TestCase.php"
+      'line' =>
+      int(751)
+      'function' =>
+      string(3) "run"
+      'class' =>
+      string(28) "PHPUnit_Framework_TestResult"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(1) {
+        ...
+      }
+    }
+    [5] =>
+    array(6) {
+      'file' =>
+      string(46) "/usr/share/php/PHPUnit/Framework/TestSuite.php"
+      'line' =>
+      int(772)
+      'function' =>
+      string(3) "run"
+      'class' =>
+      string(26) "PHPUnit_Framework_TestCase"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(1) {
+        ...
+      }
+    }
+    [6] =>
+    array(6) {
+      'file' =>
+      string(46) "/usr/share/php/PHPUnit/Framework/TestSuite.php"
+      'line' =>
+      int(745)
+      'function' =>
+      string(7) "runTest"
+      'class' =>
+      string(27) "PHPUnit_Framework_TestSuite"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(2) {
+        ...
+      }
+    }
+    [7] =>
+    array(6) {
+      'file' =>
+      string(44) "/usr/share/php/PHPUnit/TextUI/TestRunner.php"
+      'line' =>
+      int(325)
+      'function' =>
+      string(3) "run"
+      'class' =>
+      string(27) "PHPUnit_Framework_TestSuite"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(5) {
+        ...
+      }
+    }
+    [8] =>
+    array(6) {
+      'file' =>
+      string(41) "/usr/share/php/PHPUnit/TextUI/Command.php"
+      'line' =>
+      int(192)
+      'function' =>
+      string(5) "doRun"
+      'class' =>
+      string(25) "PHPUnit_TextUI_TestRunner"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(2) {
+        ...
+      }
+    }
+    [9] =>
+    array(6) {
+      'file' =>
+      string(41) "/usr/share/php/PHPUnit/TextUI/Command.php"
+      'line' =>
+      int(130)
+      'function' =>
+      string(3) "run"
+      'class' =>
+      string(22) "PHPUnit_TextUI_Command"
+      'type' =>
+      string(2) "->"
+      'args' =>
+      array(2) {
+        ...
+      }
+    }
+    [10] =>
+    array(6) {
+      'file' =>
+      string(16) "/usr/bin/phpunit"
+      'line' =>
+      int(46)
+      'function' =>
+      string(4) "main"
+      'class' =>
+      string(22) "PHPUnit_TextUI_Command"
+      'type' =>
+      string(2) "::"
+      'args' =>
+      array(0) {
+        ...
+      }
+    }
+  }
+  public $xdebug_message =>
+  string(1358) "\nPHPUnit_Framework_Error_Notice: Undefined variable: dConfig in /media/sf_VMDocs/www-dev/lbc-dh2/includes/functions.php on line 41\n\nCall Stack:\n    0.0040     116916   1. {main}() /usr/bin/phpunit:0\n    0.0311     304828   2. PHPUnit_TextUI_Command::main() /usr/bin/phpunit:46\n    0.0311     304952   3. PHPUnit_TextUI_Command->run() /usr/share/php/PHPUnit/TextUI/Command.php:130\n    0.0880    1209060   4. PHPUnit_TextUI_TestRunner->doRun() /usr/share/php/PHPUnit/TextUI/Command.php:192\n    0.0953    13"...
+}
+</pre>
+Fatal error: Class 'user' not found in /media/sf_VMDocs/www-dev/lbc-dh2/tests/classes/user/userTest.class.php on line 11
+
+Call Stack:
+    0.0040     116916   1. {main}() /usr/bin/phpunit:0
+    0.0311     304828   2. PHPUnit_TextUI_Command::main() /usr/bin/phpunit:46
+    0.0311     304952   3. PHPUnit_TextUI_Command->run() /usr/share/php/PHPUnit/TextUI/Command.php:130
+    0.0880    1209060   4. PHPUnit_TextUI_TestRunner->doRun() /usr/share/php/PHPUnit/TextUI/Command.php:192
+    0.0953    1375608   5. PHPUnit_Framework_TestSuite->run() /usr/share/php/PHPUnit/TextUI/TestRunner.php:325
+    0.0954    1376644   6. PHPUnit_Framework_TestSuite->runTest() /usr/share/php/PHPUnit/Framework/TestSuite.php:745
+    0.0954    1376660   7. PHPUnit_Framework_TestCase->run() /usr/share/php/PHPUnit/Framework/TestSuite.php:772
+    0.0954    1377252   8. PHPUnit_Framework_TestResult->run() /usr/share/php/PHPUnit/Framework/TestCase.php:751
+    0.0985    1411072   9. PHPUnit_Framework_TestCase->runBare() /usr/share/php/PHPUnit/Framework/TestResult.php:649
+    0.0993    1481540  10. userTest->setUp() /usr/share/php/PHPUnit/Framework/TestCase.php:801
+
