@@ -1,6 +1,6 @@
 <?php
 
-    class user_orm {
+    class user_orm implements storable {
 
         /**
          * User id
@@ -89,6 +89,105 @@
             $this->set_id($user_data['id']);
             $this->set_username($user_data['username']);
             $this->set_password($user_data['password']);
+
+        }
+
+        public function load_by_property(string $field, $value = NULL) {
+
+            /*check_string($field);
+
+            if is_string($value) {
+                $value = '"' . $value . '"';
+            }
+
+            $this->set_id($user_id);
+
+            $where = array($field . ' = ')
+
+            $db = db::get_slave();
+            $db->get($this->get_storable_table, $this->get_storable_fields);*/
+        }
+
+        public function get($user_id) {
+
+            check_int($user_id, 'user_id');
+            $this->set_id($user_id);
+
+            $where = array('user_id = ' . $user_id);
+
+            $db = db::get_slave();
+            $user_data = $db->get($this->get_storable_table(), $this->get_storable_fields(), $where, array(), array());
+
+            foreach ($user_data AS $index => $item) {
+
+                if ($index == 'user_id') {
+                    $item = (int)$item;
+                }
+
+                $method = 'set_' . substr($index, 5);
+                $this->$method($item);
+
+            }
+
+        }
+
+        public function save() {
+            $db = db::get_master();
+            $db->save($this);
+        }
+
+        /**
+         *  Gets Object Table
+         *
+         * @return string Table
+         */
+        public function get_storable_table() {
+            return 'user';
+        }
+
+        /**
+         *  Gets object fields
+         *
+         * @return string Fields
+         */
+        public function get_storable_fields() {
+            return 'user_id, user_username, user_password';
+        }
+
+        /**
+         *  Gets object values
+         *
+         * @return string Values
+         */
+        public function get_storable_values() {
+            return '(' . $this->get_id() . ', ' . $this->get_username() . ', ' . $this->get_password() . ')';
+
+        }
+
+        /**
+         *  Gets Where condition
+         *
+         * @return array Where
+         */
+        public function get_storable_where() {
+
+        }
+
+        /**
+         *  Gets Group By condition
+         *
+         * @return array Group
+         */
+        public function get_storable_group() {
+
+        }
+
+        /**
+         *  Gets Order By condition
+         *
+         * @return array Order
+         */
+        public function get_storable_Order() {
 
         }
 

@@ -9,6 +9,10 @@
         public function setUp() {
             $this->load_config();
             $this->user = new user();
+
+            global $dConfig;
+
+            dump($dConfig);
         }
 
         public function testGetUserId() {
@@ -23,18 +27,15 @@
 
         public function testloadUserFromDb() {
 
-            $db = $this->getMock('db');
+            global $dConfig;
 
-            $db->expects($this->once())
-                ->method('get_value')
-                ->with($this->equalTo('user', 1))
-                ->will($this->returnValue(array(
-                    'id' => 1,
-                    'username' => 'Estelle',
-                    'password' => 'Loulou'
-                    )));
+            $dbmanager = $this->getMock('dbmanager');
+dump($dConfig);
+            $dbmanager->expects($this->once())
+                ->method('get_slave')
+                ->will($this->returnValue($this->getMock('db', $dConfig['db']['slave'])));
 
-            $this->user->load(1, $db);
+            $this->user->get(1);
 
             $this->assertEquals('1', $this->user->get_id());
             $this->assertEquals('Estelle', $this->user->get_username());
