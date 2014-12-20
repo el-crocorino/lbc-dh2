@@ -1,4 +1,4 @@
 <?php
 
- echo "La bite et le couteau";
+ echo "La bite et le couteau, et la bière";
 
