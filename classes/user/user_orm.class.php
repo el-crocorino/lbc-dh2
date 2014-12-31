@@ -115,7 +115,7 @@
 
             $where = array('user_id = ' . $user_id);
 
-            $db = db::get_slave();
+            $db = dbmanager::get_slave();
             $user_data = $db->get($this->get_storable_table(), $this->get_storable_fields(), $where, array(), array());
 
             foreach ($user_data AS $index => $item) {
@@ -132,8 +132,16 @@
         }
 
         public function save() {
-            $db = db::get_master();
-            $db->save($this);
+
+            $db = dbmanager::get_master();
+
+            if (/*user with id already exists*/false) {
+                $db->update($this);
+            } else {
+                $db->save($this);
+            }
+
+
         }
 
         /**
@@ -160,7 +168,14 @@
          * @return string Values
          */
         public function get_storable_values() {
-            return '(' . $this->get_id() . ', ' . $this->get_username() . ', ' . $this->get_password() . ')';
+
+            $values = array(
+                ':user_id' => $this->get_id(),
+                ':user_username' => $this->get_username(),
+                ':user_password' => $this->get_password()
+            );
+
+            return $values;
 
         }
 

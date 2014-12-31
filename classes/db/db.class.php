@@ -45,9 +45,12 @@ class db extends db_orm {
         var_dump($item->get_storable_fields());
         var_dump($item->get_storable_values());
 
-        $sql = 'INSERT ON DUPLICATE KEY UPDATE INTO ' . $item->get_storable_table() . ' (' . $item->get_storable_fields() . ') VALUES ' . $item->get_storable_values();
+        $sql = 'INSERT INTO ' . $item->get_storable_table() . ' (' . $item->get_storable_fields() . ') VALUES (' . implode(', ', array_keys($item->get_storable_values())) . ')';
+
+        var_dump($sql);
         $query = $this->pdo->prepare($sql);
-        $query->execute();
+        $query->execute($item->get_storable_values());
+
     }
 
     public function update($table = '', $fields = '', $values = '', $where = array()) {

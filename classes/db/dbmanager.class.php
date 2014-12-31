@@ -9,6 +9,7 @@
 
         public static function get_slave() {
             global $dConfig;
-            return new db($dConfig['db']['master']);
+            var_dump(&$dConfig);
+            return new db(&$dConfig['db']['master']);
         }
     }

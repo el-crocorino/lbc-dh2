@@ -14,7 +14,6 @@
         public function load_config() {
             require_once substr(__DIR__, 0, -5) . '/config/start.php';
             global $dConfig;
-            dump($dConfig);
         }
 
     }

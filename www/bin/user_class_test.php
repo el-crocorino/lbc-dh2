@@ -15,4 +15,4 @@
     $user_two = new user();
     $user_two->get(2);
 
-    dump($user_two);
+    #dump($user_two);
