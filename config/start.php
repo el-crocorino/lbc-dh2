@@ -1,8 +1,12 @@
 <?php
 
     require_once 'config.php';
+var_dump($config);
 
-    foreach ($dConfig['includes'] AS $file) {
-        require_once $dConfig['paths']['base_path'] . $dConfig['paths']['includes'] . $file;
+/*echo "Test2";
+var_dump($dConfig);
+    foreach ($dConfig->get_config('includes') AS $file) {
+        $paths = $dConfig->get_config('paths');
+        require_once $paths['base_path'] . $paths['includes'] . $file;
     }
-
+echo "Test3";*/
