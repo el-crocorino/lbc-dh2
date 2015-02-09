@@ -12,9 +12,12 @@
          * @return void
          */
         public function load_config() {
-echo "Test1";
-            require_once substr(__DIR__, 0, -5) . '/config/start.php';
-            global $dConfig;
+
+            chdir(dirname(__FILE__));
+
+            require_once '../config/start.php';
+
+
         }
 
     }

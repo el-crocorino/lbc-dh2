@@ -1,7 +1,10 @@
 <?php
 
-    require_once substr(__DIR__, 0, -7) . 'config/start.php';
+    chdir(dirname(__FILE__));
 
+    require_once '../../config/start.php';
+#var_dump($config);
+exit;
     $user = new user();
 
     $user->set_id(1);
