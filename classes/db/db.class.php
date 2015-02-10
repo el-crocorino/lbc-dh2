@@ -8,6 +8,7 @@ class db extends db_orm {
 
         try {
             $this->pdo = new PDO("mysql:dbname=" . $db_data['dbname'] . ";host=" . $db_data['host'], $db_data['user'], $db_data['password']);
+            $this->pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
         } catch (PDOException $e) {
             dump($e, 'PDO Exception');
         }
@@ -41,15 +42,14 @@ class db extends db_orm {
 
     public function save($item) {
 
-        var_dump($item->get_storable_table());
-        var_dump($item->get_storable_fields());
-        var_dump($item->get_storable_values());
-
         $sql = 'INSERT INTO ' . $item->get_storable_table() . ' (' . $item->get_storable_fields() . ') VALUES (' . implode(', ', array_keys($item->get_storable_values())) . ')';
 
-        var_dump($sql);
         $query = $this->pdo->prepare($sql);
-        $query->execute($item->get_storable_values());
+
+        if (!$query->execute($item->get_storable_values())) {
+#var_dump($query->errorInfo());
+            throw new Exception("Error (" . $query->errorInfo()[2] . ") processing save query : " . $sql . ', ' . implode(', ', $item->get_storable_values()));
+        }
 
     }
 

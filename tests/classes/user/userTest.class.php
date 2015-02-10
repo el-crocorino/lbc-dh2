@@ -1,6 +1,8 @@
 <?php
 
-    require_once substr(__DIR__, 0, -12) . 'base.class.php';
+    chdir(dirname(__FILE__));
+
+    require_once '../../base.class.php';
 
     class userTest extends base {
 
@@ -23,8 +25,6 @@
 
         public function testloadUserFromDb() {
 
-            global $dConfig;
-
             $this->user->get(1);
 
             $this->assertEquals('1', $this->user->get_id());
@@ -33,21 +33,12 @@
 
         }
 
-        public function testPasswordHash() {
+        /*public function testPasswordHash() {
 
         }
 
         public function testPasswordCheck() {
 
-        }
+        }*/
 
     }
-
-
-
-        /**
-         * /*@expectedException checkException
-         */
-        /*public function testSetUserIdFails() {
-            $this->user->set_id('Blabla');
-        }*/

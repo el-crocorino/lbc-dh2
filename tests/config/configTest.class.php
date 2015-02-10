@@ -1,6 +1,8 @@
 <?php
 
-    require_once substr(__DIR__, 0, -6) . 'base.class.php';
+    chdir(dirname(__FILE__));
+
+    require_once '../base.class.php';
 
     class configTest extends base {
 
@@ -12,7 +14,7 @@
         }
 
         public function testConfigObject() {
-            $this->assertEquals('functions.php', $this->config->get_config('includes/functions'));
+            $this->assertEquals('functions.php', $this->config->get('includes/functions'));
         }
 
     }
