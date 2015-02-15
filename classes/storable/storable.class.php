@@ -42,7 +42,7 @@
          *
          * @return array Order
          */
-        public function get_storable_Order();
+        public function get_storable_order();
 
     }
 

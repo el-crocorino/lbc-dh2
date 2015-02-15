@@ -33,12 +33,12 @@
 
         }
 
-        /*public function testPasswordHash() {
-
-        }
-
         public function testPasswordCheck() {
 
-        }*/
+            $this->user->set_password('TestPassword');
+            $this->assertTrue($this->user->check_password('TestPassword'));
+            $this->assertFalse($this->user->check_password('WrongPassword'));
+
+        }
 
     }
