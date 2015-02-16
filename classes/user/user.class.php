@@ -2,13 +2,15 @@
 
     class user extends user_orm {
 
-        public function hash_password() {
+        public function hash_password($password) {
+
+            check_string($password, 'password');
 
             $options = [
                 'cost' => 12,
             ];
 
-            parent::set_password(password_hash($this->get_password(), PASSWORD_BCRYPT, $options));
+            $this->set_password(password_hash($password, PASSWORD_BCRYPT, $options));
 
         }
 
